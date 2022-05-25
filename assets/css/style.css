@@ -1,10 +1,11 @@
-
+/*Extensions for CSS properties added for browser compatability*/
 /*Color Pallette Used
 #88BDBC;
 #254E58;
 #112D32;
 #4F4A41;
 #6E6658;
+#5E4F4F;
 */
 /*Assigned CSS variables*/
 
@@ -40,7 +41,8 @@ body{
 
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     align-items: center;  
     
 }
@@ -60,4 +62,80 @@ body{
 
     border-top: 1px solid var(--font-color);
     border-bottom: 1px solid var(--font-color);
+}
+/*Styling avatar section*/
+
+.avatar-section{
+
+    background-color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around; 
+    /* padding: 0 2%; */
+    align-items: center;
+    font-family:"Marck Script",Roboto,'Times New Roman', Times, serif;
+    color: var(--background-color);
+    font-size: 24px;
+}
+
+/*Styling portfolio image*/
+
+/*Converted the image to gray scale ,applied transformation and other styles*/
+
+#portfolio-img{
+    height: 310px;
+    border-radius: 10%;
+    -webkit-filter:grayscale(100%);
+    filter: grayscale(100%);
+    border-left:5px solid var(--background-color);
+    border-top:5px solid  var(--background-color);
+    z-index:4;
+    transform: rotate(-8deg);
+}
+.avatar-section p{
+    line-height:60px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.avatar-section p > span{
+    color:#fff;
+    text-shadow: 5px 5px 1px 1px #4F4A41;
+    margin-bottom: 10px;
+    
+}
+/*Applied Bouncing animation for arrow icon by changing the position using translate*/
+
+.portfolio-icon{
+
+    -webkit-animation:bounceArrow 2s ease-in infinite;
+    animation: bounceArrow 2s ease-in infinite;
+}
+
+/*For compatability*/
+@-webkit-keyframes bounceArrow {
+
+    50%{
+        transform: translateY(40px);
+        color:var(--hyperlink-color);
+    }
+    
+    100%{
+        transform: translateY(50px);
+        color:#000;
+    }
+
+}
+
+@keyframes bounceArrow {
+
+    50%{
+        transform: translateY(40px);
+        color:var(--hyperlink-color);
+    }
+    
+    100%{
+        transform: translateY(50px);
+        color:#000;
+    }
+
 }
