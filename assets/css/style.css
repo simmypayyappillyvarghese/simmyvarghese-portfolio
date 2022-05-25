@@ -6,7 +6,15 @@
 #4F4A41;
 #6E6658;
 */
+/*Assigned CSS variables*/
 
+:root{
+    --font-color:#112D32;
+    --background-color:#88BDBC;
+    --hyperlink-color:#4F4A41;
+}
+
+/*Reset Style*/
 *{
     margin:0px;
     padding: 0px;
@@ -18,8 +26,38 @@ body{
     color: var(--font-color);
 }
 
-:root{
-    --font-color:#112D32;
-    --background-color:#88BDBC;
+/*Styling Header*/
+#portfolio-header{
+    background-color:var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+}
 
+/*Styling Nav list*/
+.portfolio-nav ul{
+
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
+    
+}
+.portfolio-nav ul >li{
+    margin-right: 15px;
+    
+}
+
+.portfolio-nav a{
+    text-decoration: none;
+    padding: 0.3rem;
+    color: var(--hyperlink-color);
+    transition: border 0.3s ease-in-out;
+}
+
+.portfolio-nav a:hover{
+
+    border-top: 1px solid var(--font-color);
+    border-bottom: 1px solid var(--font-color);
 }
