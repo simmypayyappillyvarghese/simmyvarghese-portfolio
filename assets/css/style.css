@@ -5,6 +5,7 @@
     --hyperlink-color: #4F4A41;
     --white-color: #fff;
     --black-color: #000;
+    --smiley-color:#E2D784;
 }
 
 /*To reset the default browser style*/
@@ -38,6 +39,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 2% 10%;
+    background-color: #bbd1d5;
 }
 
 /*Styling The Navigation List*/
@@ -81,6 +83,8 @@ body {
     font-family: "Marck Script", Roboto, 'Times New Roman', Times, serif;
     color: var(--background-color);
     font-size: 2.4rem;
+    padding: 1% 1%;
+    text-align: center;
 }
 
 /*Portfolio Image*/
@@ -99,6 +103,7 @@ body {
     line-height: 60px;
     letter-spacing: 1px;
     text-align: center;
+    
 }
 
 .avatar-section p>span {
@@ -106,6 +111,9 @@ body {
     text-shadow: 5px 5px 1px 1px #4F4A41;
     margin-bottom: 10px;
 
+}
+.fa-smile-o{
+    color:var(--smiley-color);
 }
 
 /******Animation******/
@@ -116,30 +124,25 @@ body {
 
 #portfolio-img {
 
-    animation: animateGrayScale 4s ease-in-out 2s infinite;
+    animation: animateGrayScale 4s ease-in-out 1s infinite;
 }
 
 
-.portfolio-icon {
+/* .portfolio-icon {
 
     animation: bounceArrow 2s ease-in infinite;
+} */
+
+.slide-in-text{
+    letter-spacing: 1.7px;
+    color:var(--smiley-color);
+    opacity: 0;
+    position: relative;
+    left: 0%;
+    animation: slide-in 2s linear 1s forwards;
+    color:var(--background-color);
 }
 
-/*This will create the bounce effect of arrow icon*/
-
-@keyframes bounceArrow {
-
-    50% {
-        transform: translateY(20px);
-        color: var(--hyperlink-color);
-    }
-
-    100% {
-        transform: translateY(40px);
-        color: #000;
-    }
-
-}
 
 /*This will change the color of the profile image to differnt grayscales*/
 
@@ -153,9 +156,27 @@ body {
         filter: grayscale(60%);
     }
 
-
 }
 
+/*This will create an animation of text moving from left to right
+changing color and opactity/visibility.
+*/
+@keyframes slide-in {
+    
+    20%{opacity: 0.3;
+        left: 10%;
+    }
+
+    60%{
+        opacity: 0.6;
+        left:20%;
+    }
+    100%{
+        opacity: 1;
+        left:30%;
+        color: var(--smiley-color);
+    }
+}
 
 /*************************************************  About ME Section***********************************/
 
@@ -285,6 +306,7 @@ body {
 
 #portfolio-footer,
 #portfolio-footer a {
+    background-color: #bbd1d5;
     color: var(--font-color);
     text-decoration: none;
 }
@@ -351,7 +373,7 @@ body {
         font-size: 1.4rem;
     }
 
-    /*Adjusted font size of font and portfolio image height and animation */
+    /*Adjusted font size of font and portfolio image height  */
 
     .avatar-section {
         font-size: 2.3rem;
@@ -368,17 +390,6 @@ body {
         letter-spacing: 0.1rem;
     }
 
-    @keyframes bounceArrow {
-
-        50% {
-            transform: translateY(10px);
-        }
-
-        100% {
-            transform: translateY(30px);
-        }
-
-    }
 
     /*Adjusted font size and height of the center division(line)*/
 
@@ -430,19 +441,6 @@ body {
         letter-spacing: 0.1rem;
     }
 
-    @keyframes bounceArrow {
-
-        50% {
-            transform: translateY(5px);
-            color: var(--hyperlink-color);
-        }
-
-        100% {
-            transform: translateY(15px);
-            color: var(--black-color);
-        }
-
-    }
 
     /*Reduced the left header sizes -about me,work,contact me*/
 
@@ -480,7 +478,7 @@ body {
     }
 
      /*Reducing the icon font size*/
-     
+
      #portfolio-footer i {
         font-size: 1.4rem;
     }
