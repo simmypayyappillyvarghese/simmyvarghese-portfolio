@@ -13,6 +13,7 @@
     --font-color:#112D32;
     --background-color:#88BDBC;
     --hyperlink-color:#4F4A41;
+    --white:#fff;
 }
 
 /*Reset Style*/
@@ -22,18 +23,30 @@
     box-sizing: border-box;
 }
 
+/*Using rem for making the page responsive to screen size and browser setting*/
+/*62.5% of 16-default font size=10px*/
+
+html{
+    font-size: 62.5%;  
+}
+
 body{
     font-family:Roboto,Arial, Helvetica, sans-serif;
     color: var(--font-color);
+    /* background-color: #7DA2A9; */
+    font-size: 1.6rem; 
 }
 
 /*Styling Header*/
 #portfolio-header{
-    background-color:var(--background-color);
+    /* background-color:var(--background-color);  */
+    /* background-image: url('https://images.unsplash.com/photo-1505151771131-4fe946e1cf40?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHR1cnF1b2lzZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=800'); */
+    /* background-color: #7DA2A9; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2%;
+    padding: 2% 10%;
+    
 }
 
 /*Styling Nav list*/
@@ -44,6 +57,7 @@ body{
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;  
+    font-weight: 600;
     
 }
 .portfolio-nav ul >li{
@@ -63,19 +77,22 @@ body{
     border-top: 1px solid var(--font-color);
     border-bottom: 1px solid var(--font-color);
 }
-/*Styling avatar section*/
+
+/************Portfolio Avatar Section*/
 
 .avatar-section{
 
-    background-color: #000;
-    display: flex;
+     background-color: #000;   
+    /* height: 200px; */
+    /* background:linear-gradient(to right,#000,var(--font-color));  */
+     display: flex;
     flex-wrap: wrap;
     justify-content:space-around; 
-    /* padding: 0 2%; */
     align-items: center;
     font-family:"Marck Script",Roboto,'Times New Roman', Times, serif;
     color: var(--background-color);
     font-size: 24px;
+    /* padding: 2%; */
 }
 
 /*Styling portfolio image*/
@@ -83,14 +100,18 @@ body{
 /*Converted the image to gray scale ,applied transformation and other styles*/
 
 #portfolio-img{
-    height: 310px;
-    border-radius: 10%;
-    -webkit-filter:grayscale(100%);
-    filter: grayscale(100%);
-    border-left:5px solid var(--background-color);
+    height:250px;
+        -webkit-filter:grayscale(100%);
+    filter: grayscale(110%);
+    /* border-left:5px solid var(--background-color);
     border-top:5px solid  var(--background-color);
-    z-index:4;
-    transform: rotate(-8deg);
+    border-bottom:5px solid  var(--background-color); */
+    /* z-index:4; */
+    /*Test Code for circling the image*/
+    /* display: block; */
+    /* border-radius: 10%; */
+    /* margin-top:-100px; */
+    
 }
 .avatar-section p{
     line-height:60px;
@@ -103,39 +124,168 @@ body{
     margin-bottom: 10px;
     
 }
-/*Applied Bouncing animation for arrow icon by changing the position using translate*/
-
-.portfolio-icon{
-
-    -webkit-animation:bounceArrow 2s ease-in infinite;
-    animation: bounceArrow 2s ease-in infinite;
+/*************************************************  About ME Section***********************************/
+/*Styling of about me pending*/
+#about-section{
+ 
+    color: var(--font-color);
+    padding: 3%;
 }
 
-/*For compatability*/
-@-webkit-keyframes bounceArrow {
+/************************************************* Work Section*****************************************/
+#work-section{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding:3%; 
 
-    50%{
-        transform: translateY(40px);
-        color:var(--hyperlink-color);
+}
+.left-div{
+
+    flex:0.5 0 10%;
+    text-align: center;
+}
+
+.left-div p{
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+.center-div{
+
+height:1000px;
+width:1px;
+background-color: #112D32;
+border: 1px solid #88BDBC;
+
+}
+
+.right-div{
+    flex:0 0 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+    align-items: center;
+   
+}
+
+.projects img {
+    display: block;
+    height:300px;
+}
+
+.right-div #main-project{
+ 
+    flex: 1 0 100%;
+}
+#main-project img{
+
+    width: 100%;
+    height: 400px;
+}
+
+.right-div #project-1{
+    flex: 1 0 50%;
+   
+}
+
+#project-1 img{
+    width:100%;
+    
+}
+
+.right-div #project-2{
+    flex: 1 0 50%;
+    
+}
+#project-2 img{
+    width:100%;
+
+}
+
+
+.right-div #project-3{
+    flex: 1 0 50%;
+   
+}
+
+#project-3 img{
+    width:100%;
+}
+.right-div #project-4{
+    flex: 1 0 50%;
+    
+   
+}
+#project-4 img{
+    width:100%;
+}
+
+/**********Media Queries****************/
+
+@media screen and (min-width:992px) {
+
+    #portfolio-img{
+
+        /* transform: rotate(-10deg); */ 
+         /* margin-left: -10px;  */
+         animation:animateGrayScale 4s ease-in-out 2s infinite;
     }
     
-    100%{
-        transform: translateY(50px);
-        color:#000;
+    /*Applied Bouncing animation for arrow icon by changing the position using translate*/
+
+    .portfolio-icon{
+
+        -webkit-animation:bounceArrow 2s ease-in infinite;
+        animation: bounceArrow 2s ease-in infinite;
     }
 
-}
 
-@keyframes bounceArrow {
-
-    50%{
-        transform: translateY(40px);
-        color:var(--hyperlink-color);
+    
+    /*For compatability*/
+    @-webkit-keyframes bounceArrow {
+    
+        50%{
+            transform: translateY(40px);
+            color:var(--hyperlink-color);
+        }
+        
+        100%{
+            transform: translateY(50px);
+            color:#000;
+        }
+    
     }
     
-    100%{
-        transform: translateY(50px);
-        color:#000;
+    @keyframes bounceArrow {
+    
+        50%{
+            transform: translateY(20px);
+            color:var(--hyperlink-color);
+        }
+        
+        100%{
+            transform: translateY(40px);
+            color:#000;
+        }
+    
     }
 
+    @keyframes animateGrayScale{
+        25%{
+
+            filter:grayscale(85%);
+        }
+
+        50%{
+            filter:grayscale(60%);
+        }
+        
+
+    }
 }
+
+/*To do rem declaration ,mobile first approach*/
+/*To complete about me section*/
