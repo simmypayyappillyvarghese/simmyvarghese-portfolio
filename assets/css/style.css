@@ -7,7 +7,7 @@
     --black-color: #000;
 }
 
-/*Reset Style*/
+/*To reset the default browser style*/
 
 * {
     margin: 0px;
@@ -18,7 +18,8 @@
 /*Using rem for making the page responsive to screen size and browser setting*/
 /*62.5% of 16-default font size=10px*/
 
-/*Scroll behaviour smooth will make the scrolling slow and smooth*/
+/*Scroll behaviour smooth will make the scrolling slow and smooth */
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -27,10 +28,11 @@ html {
 body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     color: var(--font-color);
-    font-size: 1.6rem;
+    font-size: 1.7rem;
 }
 
 /****************************Header Section*******************************/
+
 #portfolio-header {
     display: flex;
     justify-content: space-between;
@@ -39,6 +41,7 @@ body {
 }
 
 /*Styling The Navigation List*/
+
 .portfolio-nav ul {
     list-style-type: none;
     display: flex;
@@ -310,24 +313,100 @@ body {
 }
 
 /**********Media Queries****************/
-@media screen and (max-width: 992px) {}
 
-/* Large smartphones - navbar changes color */
-@media screen and (max-width: 768px) {}
+/*Adjusted font size for body and portfolio header*/
 
-/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 992px) {
 
-
-@media screen and (max-width: 576px) {
     body {
 
-        font-size: 1.2rem;
+        font-size: 1.9rem;
+    }
+    #portfolio-header {
+        padding: 4% 1%;
+    }
+    #portfolio-header h1 {
+        font-size: 3rem;
+    }
+
+}
+
+
+/*************** Large smartphones **************/
+@media screen and (max-width: 768px) {
+
+    body {
+
+        font-size: 1.8rem;
+    }
+    #portfolio-header {
+        padding: 6% 1%;
+    }
+    #portfolio-header h1 {
+        font-size: 1.9rem;
+    }
+
+    .portfolio-nav{
+
+        font-size: 1.4rem;
+    }
+
+    /*Adjusted font size of font and portfolio image height and animation */
+
+    .avatar-section {
+        font-size: 2.3rem;
+    }
+
+
+    #portfolio-img {
+        height: 220px
+
+    }
+
+    .avatar-section p {
+        line-height: 40px;
+        letter-spacing: 0.1rem;
+    }
+
+    @keyframes bounceArrow {
+
+        50% {
+            transform: translateY(10px);
+        }
+
+        100% {
+            transform: translateY(30px);
+        }
+
+    }
+
+    /*Adjusted font size and height of the center division(line)*/
+
+    .left-div p {
+        font-size: 2.8rem;
+    }
+
+    .center-about {
+        height:12rem;
+    }
+    
+}
+
+
+
+/********** Small smartphones*************/
+
+@media screen and (max-width: 576px) {
+    
+    body {
+
+        font-size: 1.4rem;
     }
 
     /* Reduced Padding and Font Size*/
 
     #portfolio-header {
-        padding: 2% 2%;
+        padding: 5% 2%;
         font-size: 1.2rem;
     }
 
@@ -335,8 +414,7 @@ body {
         font-size: 1.4rem;
     }
 
-    /*Changed font size,line height and animation */
-
+    
     .avatar-section {
         font-size: 2rem;
     }
@@ -372,8 +450,10 @@ body {
         font-size: 2.3rem;
     }
 
+    .center-about {
+        height:10rem;
+    }
     /*Work Section-Reduced the padding,image heights*/
-
 
     #work-section {
         padding: 1%;
@@ -399,6 +479,10 @@ body {
         padding: 2px 0;
     }
 
-
+     /*Reducing the icon font size*/
+     
+     #portfolio-footer i {
+        font-size: 1.4rem;
+    }
 
 }
