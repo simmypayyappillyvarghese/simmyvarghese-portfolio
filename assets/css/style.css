@@ -1,25 +1,17 @@
-/*Extensions for CSS properties added for browser compatability*/
-/*Color Pallette Used
-#88BDBC;
-#254E58;
-#112D32;
-#4F4A41;
-#6E6658;
-#5E4F4F;
-*/
-/*Assigned CSS variables*/
 
-:root{
-    --font-color:#112D32;
-    --background-color:#88BDBC;
-    --hyperlink-color:#4F4A41;
-    --white:#fff;
-    --black-color:#000;
+/*Assigned CSS variables*/
+:root {
+    --font-color: #112D32;
+    --background-color: #88BDBC;
+    --hyperlink-color: #4F4A41;
+    --white-color: #fff;
+    --black-color: #000;
 }
 
 /*Reset Style*/
-*{
-    margin:0px;
+
+* {
+    margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
@@ -27,52 +19,50 @@
 /*Using rem for making the page responsive to screen size and browser setting*/
 /*62.5% of 16-default font size=10px*/
 
-html{
-    font-size: 62.5%;  
+/*Scroll behaviour smooth will make the scrolling slow and smooth*/
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:Roboto,Arial, Helvetica, sans-serif;
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
     color: var(--font-color);
-    font-size: 1.6rem; 
+    font-size: 1.6rem;
 }
 
-/*Styling Header*/
-#portfolio-header{
-    /* background-color:var(--background-color);  */
-    /* background-image: url('https://images.unsplash.com/photo-1505151771131-4fe946e1cf40?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHR1cnF1b2lzZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=800'); */
-    /* background-color: #7DA2A9; */
+/****************************Header Section*******************************/
+#portfolio-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2% 10%;
-    
 }
 
-/*Styling Nav list*/
-.portfolio-nav ul{
-
+/*Styling The Navigation List*/
+.portfolio-nav ul {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    align-items: center;  
+    align-items: center;
     font-weight: 600;
-    
-}
-.portfolio-nav ul >li{
-    margin-right: 15px;
-    
+
 }
 
-.portfolio-nav a{
+.portfolio-nav ul>li {
+    margin-right: 15px;
+
+}
+
+.portfolio-nav a {
     text-decoration: none;
     padding: 0.3rem;
     color: var(--hyperlink-color);
     transition: border 0.3s ease-in-out;
 }
 
-.portfolio-nav a:hover{
+.portfolio-nav a:hover {
 
     border-top: 1px solid var(--font-color);
     border-bottom: 1px solid var(--font-color);
@@ -80,246 +70,246 @@ body{
 
 /************Portfolio Avatar Section*/
 
-.avatar-section{
-
-     background-color: #000;   
-    /* height: 200px; */
-    /* background:linear-gradient(to right,#000,var(--font-color));  */
-     display: flex;
+.avatar-section {
+    background-color: var(--black-color);
+    display: flex;
     flex-wrap: wrap;
-    justify-content:space-around; 
+    justify-content: space-around;
     align-items: center;
-    font-family:"Marck Script",Roboto,'Times New Roman', Times, serif;
+    font-family: "Marck Script", Roboto, 'Times New Roman', Times, serif;
     color: var(--background-color);
-    font-size: 24px;
-    /* padding: 2%; */
+    font-size: 2.4rem;
 }
 
-/*Styling portfolio image*/
+/*Portfolio Image*/
 
-/*Converted the image to gray scale ,applied transformation and other styles*/
+/*Applied gray scale , transformation and other styles*/
+/*Extension needed for filter added as per MDN documentation*/
 
-#portfolio-img{
-    height:250px;
-        -webkit-filter:grayscale(100%);
+#portfolio-img {
+    height: 250px;
+    -webkit-filter: grayscale(100%);
     filter: grayscale(110%);
-    
+
 }
-.avatar-section p{
-    line-height:60px;
+
+.avatar-section p {
+    line-height: 60px;
     letter-spacing: 1px;
     text-align: center;
 }
-.avatar-section p > span{
-    color:#fff;
+
+.avatar-section p > span {
+    color: var(--white-color);
     text-shadow: 5px 5px 1px 1px #4F4A41;
     margin-bottom: 10px;
-    
+
 }
+
+/******Animation******/
+
+/*Applied Bouncing animation for arrow icon by changing the position using translate
+  and grayscale animation to profile image. 
+*/
+ 
+   #portfolio-img {
+
+        animation: animateGrayScale 4s ease-in-out 2s infinite;
+    }
+
+
+    .portfolio-icon {
+
+        animation: bounceArrow 2s ease-in infinite;
+    }
+
+/*This will create the bounce effect of arrow icon*/
+
+@keyframes bounceArrow {
+
+        50% {
+            transform: translateY(20px);
+            color: var(--hyperlink-color);
+        }
+
+        100% {
+            transform: translateY(40px);
+            color: #000;
+        }
+
+    }
+
+/*This will change the color of the profile image to differnt grayscales*/
+
+    @keyframes animateGrayScale {
+        25% {
+
+            filter: grayscale(85%);
+        }
+
+        50% {
+            filter: grayscale(60%);
+        }
+
+
+    }
+
+
 /*************************************************  About ME Section***********************************/
-/*Styling of about me pending*/
-#about-section{
+
+
+#about-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
-    padding:6% 3%;
+    padding: 6% 3%;
 }
 
-.center-div-about{
+/*This is to create the line between about me text and  about info*/
+
+.center-div {
+    width: 0.2%;
+    background-color: var(--font-color);
+    border: 1px solid var(--background-color);
+
+}
+
+.center-about {
     height: 100px;
-    width:1px;
-    background-color: #112D32;
-    border: 1px solid #88BDBC;
- }
-    
-    .right-div-about{
-        display: flex;
-        flex:0 0 60%;
-        flex-wrap: wrap;
-        justify-content:space-around;
-        align-items: center;
-    }
+}
+
+
+.right-div-about {
+    display: flex;
+    flex: 0 0 60%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
 
 /************************************************* Work Section*****************************************/
-#work-section{
+
+
+#work-section {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
-    padding:3%; 
+    padding: 3%;
 
 }
-.left-div{
 
-    flex:0.5 0 10%;
-   
+.left-div {
+
+    flex: 0.5 0 10%;
+
 }
 
-.left-div p{
+.left-div p {
     font-size: 4rem;
     font-weight: 900;
     text-align: center;
 }
 
-.center-div{
-height:1000px;
-width:1px;
-background-color: #112D32;
-border: 1px solid #88BDBC;
+/*This is to create the line between work  text and  project info*/
 
+.center-work {
+    height: 1000px;
 }
 
-.right-div{
-    flex:0 0 60%;
+.right-div {
+    flex: 0 0 60%;
     display: flex;
     flex-wrap: wrap;
-    justify-content:flex-end;
+    justify-content: flex-end;
     align-items: center;
 }
 
 
-#main-project{
+/*Project div styling*/
+
+#main-project {
     position: relative;
     flex: 1 0 100%;
 }
-#main-project img{
+
+#main-project img {
 
     width: 100%;
     height: 400px;
 }
 
 
-#project-1,#project-2,#project-3,#project-4{
+#project-1,
+#project-2,
+#project-3,
+#project-4 {
     flex: 1 0 50%;
     position: relative;
 }
 
-.project-images{
+.project-images {
     display: block;
-    width:100%;
-    height:300px;
-    
+    width: 100%;
+    height: 300px;
+
 }
 
 
-.project-lang{
-
-    width:auto;
-    height:10%;
-    background-color: #000;
-    color: #fff;
+.project-lang {
+    width: auto;
+    height: 10%;
+    background-color: var(--black-color);
+    color: var(--white-color);
     padding: 5px 0;
     border-radius: 3%;
     position: absolute;
     bottom: 0px;
-    left:0;
-    
+    left: 0;
 }
+
 /****************************Contact Me Section****************/
 
 
-#contact-section{
+#contact-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
-    padding:3%;
+    padding: 3%;
 }
 
-#portfolio-footer ,#portfolio-footer a{
-    color:var(--font-color);
+#portfolio-footer,
+#portfolio-footer a {
+    color: var(--font-color);
     text-decoration: none;
 }
-#portfolio-footer i{
+
+#portfolio-footer i {
     font-size: 2rem;
 }
 
-#contact-section{
+#contact-section {
     display: flex;
 }
 
 
+/*This is to create the line between contact me text and  contact info*/
 
-.center-div-footer{
+.center-footer {
     height: 60px;
-    width:1px;
-    background-color: #112D32;
-    border: 1px solid #88BDBC;
- }
-    
-    .right-div-footer{
-        display: flex;
-        flex:0 0 60%;
-        flex-wrap: wrap;
-        justify-content:space-around;
-        align-items: center;
-    }
+}
+
+.right-div-footer {
+    display: flex;
+    flex: 0 0 60%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
 
 /**********Media Queries****************/
 
-@media screen and (min-width:992px) {
 
-    #portfolio-img{
-
-        /* transform: rotate(-10deg); */ 
-         /* margin-left: -10px;  */
-         animation:animateGrayScale 4s ease-in-out 2s infinite;
-    }
-    
-    /*Applied Bouncing animation for arrow icon by changing the position using translate*/
-
-    .portfolio-icon{
-
-        -webkit-animation:bounceArrow 2s ease-in infinite;
-        animation: bounceArrow 2s ease-in infinite;
-    }
-
-
-    
-    /*For compatability*/
-    @-webkit-keyframes bounceArrow {
-    
-        50%{
-            transform: translateY(40px);
-            color:var(--hyperlink-color);
-        }
-        
-        100%{
-            transform: translateY(50px);
-            color:#000;
-        }
-    
-    }
-    
-    @keyframes bounceArrow {
-    
-        50%{
-            transform: translateY(20px);
-            color:var(--hyperlink-color);
-        }
-        
-        100%{
-            transform: translateY(40px);
-            color:#000;
-        }
-    
-    }
-
-    @keyframes animateGrayScale{
-        25%{
-
-            filter:grayscale(85%);
-        }
-
-        50%{
-            filter:grayscale(60%);
-        }
-        
-
-    }
-}
-
-/*To do rem declaration ,mobile first approach*/
-/*To complete about me section*/
