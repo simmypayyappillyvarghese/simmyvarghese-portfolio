@@ -1,4 +1,3 @@
-
 /*Assigned CSS variables*/
 :root {
     --font-color: #112D32;
@@ -99,7 +98,7 @@ body {
     text-align: center;
 }
 
-.avatar-section p > span {
+.avatar-section p>span {
     color: var(--white-color);
     text-shadow: 5px 5px 1px 1px #4F4A41;
     margin-bottom: 10px;
@@ -111,48 +110,48 @@ body {
 /*Applied Bouncing animation for arrow icon by changing the position using translate
   and grayscale animation to profile image. 
 */
- 
-   #portfolio-img {
 
-        animation: animateGrayScale 4s ease-in-out 2s infinite;
-    }
+#portfolio-img {
+
+    animation: animateGrayScale 4s ease-in-out 2s infinite;
+}
 
 
-    .portfolio-icon {
+.portfolio-icon {
 
-        animation: bounceArrow 2s ease-in infinite;
-    }
+    animation: bounceArrow 2s ease-in infinite;
+}
 
 /*This will create the bounce effect of arrow icon*/
 
 @keyframes bounceArrow {
 
-        50% {
-            transform: translateY(20px);
-            color: var(--hyperlink-color);
-        }
-
-        100% {
-            transform: translateY(40px);
-            color: #000;
-        }
-
+    50% {
+        transform: translateY(20px);
+        color: var(--hyperlink-color);
     }
+
+    100% {
+        transform: translateY(40px);
+        color: #000;
+    }
+
+}
 
 /*This will change the color of the profile image to differnt grayscales*/
 
-    @keyframes animateGrayScale {
-        25% {
+@keyframes animateGrayScale {
+    25% {
 
-            filter: grayscale(85%);
-        }
-
-        50% {
-            filter: grayscale(60%);
-        }
-
-
+        filter: grayscale(85%);
     }
+
+    50% {
+        filter: grayscale(60%);
+    }
+
+
+}
 
 
 /*************************************************  About ME Section***********************************/
@@ -176,7 +175,7 @@ body {
 }
 
 .center-about {
-    height: 100px;
+    height: 9rem;
 }
 
 
@@ -216,7 +215,7 @@ body {
 /*This is to create the line between work  text and  project info*/
 
 .center-work {
-    height: 1000px;
+    height: 103rem;
 }
 
 .right-div {
@@ -277,7 +276,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: flex-start;
+    align-items: center;
     padding: 3%;
 }
 
@@ -299,7 +298,7 @@ body {
 /*This is to create the line between contact me text and  contact info*/
 
 .center-footer {
-    height: 60px;
+    height: 6rem;
 }
 
 .right-div-footer {
@@ -311,5 +310,95 @@ body {
 }
 
 /**********Media Queries****************/
+@media screen and (max-width: 992px) {}
+
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {}
+
+/* Small smartphones - image placeholders change color */
 
 
+@media screen and (max-width: 576px) {
+    body {
+
+        font-size: 1.2rem;
+    }
+
+    /* Reduced Padding and Font Size*/
+
+    #portfolio-header {
+        padding: 2% 2%;
+        font-size: 1.2rem;
+    }
+
+    #portfolio-header h1 {
+        font-size: 1.4rem;
+    }
+
+    /*Changed font size,line height and animation */
+
+    .avatar-section {
+        font-size: 2rem;
+    }
+
+
+    #portfolio-img {
+        height: 180px;
+
+    }
+
+    .avatar-section p {
+        line-height: 40px;
+        letter-spacing: 0.1rem;
+    }
+
+    @keyframes bounceArrow {
+
+        50% {
+            transform: translateY(5px);
+            color: var(--hyperlink-color);
+        }
+
+        100% {
+            transform: translateY(15px);
+            color: var(--black-color);
+        }
+
+    }
+
+    /*Reduced the left header sizes -about me,work,contact me*/
+
+    .left-div p {
+        font-size: 2.3rem;
+    }
+
+    /*Work Section-Reduced the padding,image heights*/
+
+
+    #work-section {
+        padding: 1%;
+
+    }
+
+    .center-work {
+        height: 65rem;
+    }
+
+
+    #main-project img {
+
+        height: 220px;
+    }
+
+    .project-images {
+        height: 180px;
+
+    }
+
+    .project-lang {
+        padding: 2px 0;
+    }
+
+
+
+}
