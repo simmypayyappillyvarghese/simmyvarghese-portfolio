@@ -1,7 +1,7 @@
 /*Assigned CSS variables*/
 :root {
     --font-color: #112D32;
-    --background-color: #88BDBC;
+    --background-color: #bbd1d5;
     --hyperlink-color: #4F4A41;
     --white-color: #fff;
     --black-color: #000;
@@ -39,7 +39,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 2% 10%;
-    background-color: #bbd1d5;
+    background-color: var(--background-color);
 }
 
 /*Styling The Navigation List*/
@@ -75,7 +75,7 @@ body {
 /************Portfolio Avatar Section*/
 
 .avatar-section {
-    background-color: var(--black-color);
+    background-color: var(--font-color);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -89,7 +89,7 @@ body {
 
 /*Portfolio Image*/
 
-/*Applied gray scale , transformation and other styles*/
+/*Applied gray scale  and other styles*/
 /*Extension needed for filter added as per MDN documentation*/
 
 #portfolio-img {
@@ -318,7 +318,7 @@ changing color and opactity/visibility.
 
 #portfolio-footer,
 #portfolio-footer a {
-    background-color: #bbd1d5;
+    background-color: var(--background-color);
     color: var(--font-color);
     text-decoration: none;
 }
