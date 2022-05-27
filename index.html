@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <!--Header element with 3 nav elements navigated to respective section and a downloadable nav link(resume) -->
     <header id="portfolio-header">
         <h1 id="portfolio-heading">Simmy Payyappilly Varghese</h1>
         <nav class="portfolio-nav">
@@ -27,11 +28,14 @@
             </ul>
         </nav>
     </header>
+    <!--Main element with three sections-avatar section with photo(grayscale animation) and text(animated),about me section and work section-->
+    <!--div with class center-div used as a seperation line between heading and content of each section-->
+
     <main id="portfolio-main">
         <section class="avatar-section">
             <img src="./assets/images/profile_2.jpg" alt="portfolio image" id="portfolio-img">
-            <p>Hello World !!!! <span><i class="fa fa-smile-o"></i></span><br/>
-                <strong >I am a Front End Web Developer</strong><br/>
+            <p>Hello World !!!! <i class="fa fa-smile-o"></i><br />
+                <strong>I am a Front End Web Developer</strong><br />
                 <em class="slide-in-text">in the making</em>
                 <!-- <i class="fa fa-arrow-down portfolio-icon"></i> -->
             </p>
@@ -44,44 +48,56 @@
 
             </div>
             <div class="right-div-about">
-                <p>I have been working for 7 year in IT industry in multiple roles and responsibilities.
-                    Starting as Tester in Tech Mahindra to System Support Analyst and Web Developer in Blackhawk Network.
-                    Beginning.   with the last role as Web Developer ,I was working in Cash Star Project which is Blackhawk’s digital gifting and incentive solution platform.
-                    .My responsibilities were to understand the Platform and the Application,I was working on a Storefront Application(React based) and how it was connected to the difference python services  an to the mySQL db.
-                    `Updating the email template including the header image and styling  using LESS variable and  application’s messages via cash star messages.
+                <p>Hi, I’m Simmy.<strong> I’m a Front End Developer </strong> who loves to create beautifully simple things.
+                I started my career journey as a <em> Manual Tester for British Telecom </em> Siebel client from India
+                which over the years improved my eye for details and to troubleshoot issues.After two years I moved to USA 
+                and did my Masters in Software Engineering . On completion of my course started working as <em> System Support 
+                Analyst in Blackhawk Network</em>.</p>
+                <p>
+                    I’m naturally curious and a great self learner and this have helped me supporting multiple platforms and excelling in my work.My  <i class="fa fa-heart"></i> for learning new things and to know beyond the unknown led me to coding and the front end technologies. Down the road I would like to create functional websites with eye-catching design .
                 </p>
             </div>
         </section>
-
         <section class="portfolio-sections" id="work-section">
-                <div class="left-div">
-                    <p>Work</p>
+            <div class="left-div">
+                <p>Work</p>
+            </div>
+            <div class="center-div center-work"></div>
+            <div class="right-div">
+                <div id="main-project">
+                    <a href="https://simmypayyappillyvarghese.github.io/comingSoonPage/"><img
+                            src="./assets/images/main-project.png" alt="Snapshot of Coming soon Page"
+                            class="main-project-image"></a>
+                    <span class="project-lang">HTML/CSS</span>
                 </div>
-                <div class="center-div center-work"></div>
-                <div class="right-div">
-                    <div id="main-project" >
-                        <a href="https://simmypayyappillyvarghese.github.io/comingSoonPage/"><img src="./assets/images/main-project.png" alt="Snapshot of Coming soon Page" class="main-project-image"></a>
-                        <span class="project-lang">HTML/CSS</span> 
-                    </div>
-                    <div id="project-1" class="projects">
-                        <a href="https://simmypayyappillyvarghese.github.io/hobees-restaurant-page/"><img src="./assets/images/hobees-restaurant-project.png" alt="Snapshot of Hobbes Website Page" class="project-images"></a>
-                        <span class="project-lang">HTML/CSS</span> 
-                    </div>
-                    <div id="project-2" class="projects">
-                        <a href="https://simmypayyappillyvarghese.github.io/CSS-cheatsheet/"><img src="./assets/images/cheatsheet-project.png" alt="Snapshot of Cheatsheet Page" class="project-images"></a>
-                        <span class="project-lang">HTML/CSS</span> 
-                    </div>
-                    <div id="project-3" class="projects">
-                        <a href="https://simmypayyappillyvarghese.github.io/LandingPage/"><img src="./assets/images/landingPage.png" alt="Snapshot of Horiseon Web Page" class="project-images"></a>
-                        <span class="project-lang">HTML/CSS</span> 
-                    </div>
-                    <div id="project-4" class="projects">     
-                        <a href="https://simmypayyappillyvarghese.github.io/Javascript30-CSS-Variables-JS/"><img src="./assets/images/css-variable-project.png" alt="Snapshot of CSS Variable Project" class="project-images"></a>
-                        <span class="project-lang">HTM/CSS/JS</span> 
-                    </div>
+                <div id="project-1" class="projects">
+                    <a href="https://simmypayyappillyvarghese.github.io/hobees-restaurant-page/"><img
+                            src="./assets/images/hobees-restaurant-project.png" alt="Snapshot of Hobbes Website Page"
+                            class="project-images"></a>
+                    <span class="project-lang">HTML/CSS</span>
                 </div>
+                <div id="project-2" class="projects">
+                    <a href="https://simmypayyappillyvarghese.github.io/CSS-cheatsheet/"><img
+                            src="./assets/images/cheatsheet-project.png" alt="Snapshot of Cheatsheet Page"
+                            class="project-images"></a>
+                    <span class="project-lang">HTML/CSS</span>
+                </div>
+                <div id="project-3" class="projects">
+                    <a href="https://simmypayyappillyvarghese.github.io/LandingPage/"><img
+                            src="./assets/images/landingPage.png" alt="Snapshot of Horiseon Web Page"
+                            class="project-images"></a>
+                    <span class="project-lang">HTML/CSS</span>
+                </div>
+                <div id="project-4" class="projects">
+                    <a href="https://simmypayyappillyvarghese.github.io/Javascript30-CSS-Variables-JS/"><img
+                            src="./assets/images/css-variable-project.png" alt="Snapshot of CSS Variable Project"
+                            class="project-images"></a>
+                    <span class="project-lang">HTM/CSS/JS</span>
+                </div>
+            </div>
         </section>
     </main>
+    <!--Footer section with contact section with icons and links to navigate to respective site-->
     <footer id="portfolio-footer">
         <section id="contact-section">
             <div class="left-div">
@@ -89,12 +105,14 @@
             </div>
             <div class="center-footer center-div"></div>
             <div class="right-div-footer">
-            <span><i class="fa fa-phone"></i>  925-523-1393 </span>
-            <address>
-                <a href="mailto:simmyvarghese5@gmail.com"> Send <i class="fa fa-send"></i></a>
-            </address>
-            <a href="https://www.linkedin.com/in/simmyvarghese/" target="_blank">Connect via <i class="fa fa-linkedin-square"></i></a>
-            <a href="https://github.com/simmypayyappillyvarghese" target="_blank">GitHub <i class="fa fa-github"> </i></a>
+                <span><i class="fa fa-phone"></i> 925-523-1393 </span>
+                <address>
+                    <a href="mailto:simmyvarghese5@gmail.com"> Send <i class="fa fa-send"></i></a>
+                </address>
+                <a href="https://www.linkedin.com/in/simmyvarghese/" target="_blank">Connect via <i
+                        class="fa fa-linkedin-square"></i></a>
+                <a href="https://github.com/simmypayyappillyvarghese" target="_blank">GitHub <i class="fa fa-github">
+                    </i></a>
             </div>
         </section>
     </footer>

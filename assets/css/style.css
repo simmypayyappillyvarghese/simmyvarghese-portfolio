@@ -5,7 +5,7 @@
     --hyperlink-color: #4F4A41;
     --white-color: #fff;
     --black-color: #000;
-    --smiley-color:#E2D784;
+    --smiley-color: #E2D784;
 }
 
 /*To reset the default browser style*/
@@ -103,7 +103,7 @@ body {
     line-height: 60px;
     letter-spacing: 1px;
     text-align: center;
-    
+
 }
 
 .avatar-section p>span {
@@ -112,8 +112,9 @@ body {
     margin-bottom: 10px;
 
 }
-.fa-smile-o{
-    color:var(--smiley-color);
+
+.fa-smile-o {
+    color: var(--smiley-color);
 }
 
 /******Animation******/
@@ -133,14 +134,14 @@ body {
     animation: bounceArrow 2s ease-in infinite;
 } */
 
-.slide-in-text{
+.slide-in-text {
     letter-spacing: 1.7px;
-    color:var(--smiley-color);
+    color: var(--smiley-color);
     opacity: 0;
     position: relative;
     left: 0%;
     animation: slide-in 2s linear 1s forwards;
-    color:var(--background-color);
+    color: var(--background-color);
 }
 
 
@@ -162,18 +163,20 @@ body {
 changing color and opactity/visibility.
 */
 @keyframes slide-in {
-    
-    20%{opacity: 0.3;
+
+    20% {
+        opacity: 0.3;
         left: 10%;
     }
 
-    60%{
+    60% {
         opacity: 0.6;
-        left:20%;
+        left: 20%;
     }
-    100%{
+
+    100% {
         opacity: 1;
-        left:30%;
+        left: 30%;
         color: var(--smiley-color);
     }
 }
@@ -199,7 +202,7 @@ changing color and opactity/visibility.
 }
 
 .center-about {
-    height: 9rem;
+    height: 22rem;
 }
 
 
@@ -209,6 +212,15 @@ changing color and opactity/visibility.
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    text-align: justify
+}
+.right-div-about p{
+    margin-bottom: 1%;
+    line-height: 22px;
+    letter-spacing: 0.7px;
+}
+.fa-heart{
+    color:#ff0000;
 }
 
 /************************************************* Work Section*****************************************/
@@ -344,11 +356,21 @@ changing color and opactity/visibility.
 
         font-size: 1.9rem;
     }
+
     #portfolio-header {
         padding: 4% 1%;
     }
+
     #portfolio-header h1 {
         font-size: 3rem;
+    }
+    .center-about {
+        height: 45rem;
+    }
+
+    #about-section p{
+        
+        padding: 2% 3%;
     }
 
 }
@@ -361,14 +383,16 @@ changing color and opactity/visibility.
 
         font-size: 1.8rem;
     }
+
     #portfolio-header {
         padding: 6% 1%;
     }
+
     #portfolio-header h1 {
         font-size: 1.9rem;
     }
 
-    .portfolio-nav{
+    .portfolio-nav {
 
         font-size: 1.4rem;
     }
@@ -381,8 +405,7 @@ changing color and opactity/visibility.
 
 
     #portfolio-img {
-        height: 220px
-
+        height: 218px
     }
 
     .avatar-section p {
@@ -398,9 +421,14 @@ changing color and opactity/visibility.
     }
 
     .center-about {
-        height:12rem;
+        height: 54rem;
     }
-    
+
+    #about-section p{
+        
+        padding: 3% 3%;
+    }
+
 }
 
 
@@ -408,7 +436,7 @@ changing color and opactity/visibility.
 /********** Small smartphones*************/
 
 @media screen and (max-width: 576px) {
-    
+
     body {
 
         font-size: 1.4rem;
@@ -425,7 +453,7 @@ changing color and opactity/visibility.
         font-size: 1.4rem;
     }
 
-    
+
     .avatar-section {
         font-size: 2rem;
     }
@@ -449,8 +477,14 @@ changing color and opactity/visibility.
     }
 
     .center-about {
-        height:10rem;
+        height: 52rem;
     }
+
+    #about-section p{
+        
+        padding: 4% 3%;
+    }
+
     /*Work Section-Reduced the padding,image heights*/
 
     #work-section {
@@ -477,10 +511,23 @@ changing color and opactity/visibility.
         padding: 2px 0;
     }
 
-     /*Reducing the icon font size*/
+    /*Reducing the icon font size*/
 
-     #portfolio-footer i {
+    #portfolio-footer i {
         font-size: 1.4rem;
     }
 
+}
+
+@media screen and (max-width: 450px) {
+
+    .center-about {
+        height: 58rem;
+    }
+
+    #portfolio-img {
+        height: 140px;
+
+    }
+    
 }
