@@ -3,7 +3,7 @@
 ## Description
 <br>
 My Portfolio Webpage is created using HTMl5 elements and CSS3 including CSS Flexbox and animations.Portfolio Page includes a header with navigation links 
-directed to the respective sections and Resume link to download the Resume(PDF file).And main elements the three sections avatar section with portfolio image,about meand work.Footer includes the contact me section includes contaxt info with icons that will navigate to the respective pages.
+directed to the respective sections and Resume link to download the Resume(PDF file).And main element has the three sections -avatar section with portfolio image,about me and work.Footer includes the contact me section includes contact info with font awesome icons that will link to the respective socia media pages.
 
 <br>
 
