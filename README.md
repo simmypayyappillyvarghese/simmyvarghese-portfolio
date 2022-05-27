@@ -20,6 +20,10 @@ GIVEN I need to sample a potential employee's previous work
 * WHEN I resize the page or view the site on various screens and devices THEN I am presented with a responsive layout that adapts to my viewport.
 ## Links
 
+
+* Repository Link   :  https://github.com/simmypayyappillyvarghese/simmyvarghese-portfolio
+* Deployed Application Link :  https://simmypayyappillyvarghese.github.io/simmyvarghese-portfolio/
+
 ## Technologies Used
 
 * [x] HTML5
