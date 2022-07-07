@@ -283,7 +283,9 @@ changing color and opactity/visibility.
 #project-4 {
     flex: 1 0 50%;
     position: relative;
+    border: 1px solid var(--font-color);
 }
+
 
 .project-images {
     display: block;
