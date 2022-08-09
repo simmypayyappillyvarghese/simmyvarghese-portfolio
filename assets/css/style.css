@@ -202,7 +202,7 @@ changing color and opactity/visibility.
 }
 
 .center-about {
-    height: 22rem;
+    height: 30rem;
 }
 
 
@@ -251,7 +251,7 @@ changing color and opactity/visibility.
 /*This is to create the line between work  text and  project info*/
 
 .center-work {
-    height: 103rem;
+    height: 140rem;
 }
 
 .right-div {
@@ -280,7 +280,8 @@ changing color and opactity/visibility.
 #project-1,
 #project-2,
 #project-3,
-#project-4 {
+#project-4 ,
+#project-5{
     flex: 1 0 50%;
     position: relative;
     border: 1px solid var(--font-color);
@@ -497,7 +498,7 @@ changing color and opactity/visibility.
     }
 
     .center-work {
-        height: 65rem;
+        height: 75rem;
     }
 
 
